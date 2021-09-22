@@ -1,0 +1,22 @@
+ul {
+    list-style-type: none;
+    list-style: none;
+}
+
+#content_frame {
+    position: absolute;
+    top: 150px;
+    left: 120px;
+    width: 75%;
+    height: 75%;
+}
+
+td {
+    background-color: black;
+}
+
+#black_line {
+    position: absolute;
+    left: 110px;
+    top: 160px;
+}

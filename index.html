@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Guide HTML Assignment</title>
+        <script src="javascript.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="clippy.gif" type="image/gif" />
+    </head>
+    <body>
+        <h1 align="center">User Guide</h1>
+        <h3 align="center">By Seb 2021</h3>
+        <br><br>
+        <p>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/task_1/index.html', this);">Task 1</a><br>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/task_2/index.html', this);">Task 2</a><br>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/task_3/index.html', this);">Task 3</a><br>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/task_4/index.html', this);">Task 4</a><br>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/task_5/index.html', this);">Task 5</a><br>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/task_6/index.html', this);">Task 6</a><br>
+            &emsp;&emsp;<a href="#" onClick="changeFrame('tasks/help/index.html', this);">HELP</a><br>
+        </p>
+        <table id="black_line">
+            <tr><td><br><br><br><br><br><br><br>&nbsp;</td></tr>
+        </table>
+        <iframe id="content_frame"></iframe>
+        <script>
+            document.getElementsByTagName("a")[0].click();
+        </script>
+    </body>
+</html>

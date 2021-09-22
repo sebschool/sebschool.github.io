@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <style>
+            #main_content {
+                top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1 align="center" id="user_title"></h1>
+
+        <div id="main_content">
+            <p align="center" style="position:absolute; top:-10px;">
+                <button onClick="changeTab('fun', this);" name="tab">Fun/Games</button>
+                <button onClick="changeTab('account', this);" name="tab">Account Options</button>
+                <button onClick="changeTab('admin', this);" name="tab" hidden>Admin Tools</button>
+            </p>
+            <p style="margin: 35px;"></p>
+            <hr style="background-color: black; color: black;">
+            <div id="inner_tab">
+                
+            </div>
+        </div>
+
+        <script>
+            // Setting the initial tab
+            for (const curTab of document.getElementsByName("tab")) {
+                curTab.style.backgroundColor = "white";
+            }
+            // Setting the initial tab's button to be clicked
+            document.getElementsByName("tab")[0].click();
+            // Sending the user back to the login screen if they don't have a username in the localstorage
+            if (localStorage.getItem("username") == undefined) {
+                window.location.href = "index.html";
+            }
+            // Setting the title to show the user's name
+            let main = document.getElementById("user_title");
+            main.innerHTML = `Welcome to the site "${localStorage.getItem("username")}"!` + main.innerHTML + "</h3>";
+            // Checking whether the user is an admin and showing the admin tools if they are
+            checkAdmin();
+        </script>
+    </body>
+</html>

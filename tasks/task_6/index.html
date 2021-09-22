@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script src="script.js"></script>
+        <style>
+            td {
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Task 6: Input Population Through Radio Buttons</h2>
+        <table border=1>
+            <tr>
+                <td>
+                    <fieldset id="computer_stuff" style="border: none;">
+                        <input type="radio" value="Mac" name="computer_stuff" id="mac" onchange="changeSelect(this);">
+                        <label for="mac">Mac</label>
+                        <br><br>
+                        <input type="radio" value="Microsoft" name="computer_stuff" id="michaelsoft" onchange="changeSelect(this);">
+                        <label for="michaelsoft">Microsoft</label>
+                        <br><br>
+                        <input type="radio" value="Open Source" name="computer_stuff" id="open_source" onchange="changeSelect(this);">
+                        <label for="open_source">Open Source</label>
+                        <br>
+                    </fieldset>
+                </td>
+                <td align="center">
+                    <select id="select_values" onChange="changeTextBelow(this)" hidden>
+
+                    </select>
+                    <p id="select_disp">&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

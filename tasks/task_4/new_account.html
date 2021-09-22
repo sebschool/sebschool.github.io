@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="main_content">
+            <h3 align="center">Choose a username and password</h3>
+            <p>&emsp;<b>Username:</b><input type="text" id="new_username" style="position:absolute;left:125px;top:76px;"></p>
+            <p>&emsp;<b>Password:</b><input type="password" id="new_password" style="position:absolute;left:125px;top:111px;"></p>
+            <p align="center">
+                <button onClick="newAccount();" >Create</button>
+                <button onClick="window.location.href = 'index.html';" >Cancel</button>
+            </p>
+        </div>
+        <script>
+            initLoginDatabase();
+        </script>
+    </body>
+</html>

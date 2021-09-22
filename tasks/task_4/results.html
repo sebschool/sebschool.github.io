@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <style>
+            p {
+                position: absolute;
+                left: 15px;
+                top: 35px;
+            }
+            button {
+                position: absolute;
+                left: 70px;
+                top: 137px;
+                width: 125px;
+            }
+            #main_content {
+                height: 225px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main_content">
+            <h3 align="center">Results:</h3>
+        </div>
+        <script>
+            // Make sure that the user is actually logged in
+            if (localStorage.getItem("username") == undefined) {
+                window.location.href = "index.html";
+            }
+
+            // Initial variables
+            let content = document.getElementById("main_content");
+            let urlParams = new URL(window.location.href).searchParams;
+
+            // User variables
+            let decadeBorn = urlParams.getAll("decadeBorn");
+            let favLanguage = urlParams.getAll("favLanguage");
+            let toiletPaperJoke = urlParams.getAll("toiletPaperJoke");
+
+            // Adding the results to the main content
+            content.innerHTML = `${content.innerHTML}
+            <p> You were born in the <b>${decadeBorn}</b>!<br><br>
+                Your favourite/most used programming language is: <b>${favLanguage}</b>!<br><br>
+                Why did the toilet paper roll down the hill? <b>${toiletPaperJoke}</b><br>
+            </p>
+            <p align="center">
+                <button onClick="window.location.href = 'logged_in.html'">Back to account</button>
+            </p>
+            `;
+        </script>
+    </body>
+</html>

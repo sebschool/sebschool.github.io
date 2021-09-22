@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script src="script.js"></script>
+        <style>
+            * {
+                margin: 0 auto !important;
+            }
+            input {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 align="center">Task 3: Random Dice Rolls With Custom Faces</h2>
+        <h5 align="center">Warning: The dice images may sometimes not load even if the generated number is between 1 and 6!</h5>
+        <br>
+        <table border=1>
+            <tr>
+                <th>Minimum Value</th>
+                <th>Maximum Value</th>
+            </tr>
+            <tr>
+                <td>
+                    <select id="select0"></select>
+                </td>
+                <td>
+                    <select id="select1"></select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=2 style="text-align: center;">
+                    <button onClick="rollDice();">Roll The Dice!</button>
+                </td>
+            </tr>
+        </table>
+        <p align="center">
+            <input type="text" id="num0" disabled size=13>
+            <input type="text" id="num1" disabled size=13>
+            <br><br>
+            <img src="dice/1.png" width=125 height=125 hidden>
+            <img src="dice/6.png" width=125 height=125 hidden>
+        </p>
+        <script>
+            // Populating the lists dynamically
+            populateLists();
+        </script>
+    </body>
+</html>

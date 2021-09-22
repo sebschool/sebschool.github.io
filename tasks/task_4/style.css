@@ -1,0 +1,23 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+}
+#main_content {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin:0 auto;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 38vw;
+    height: 190px;
+    border-radius: 10px;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: white;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
