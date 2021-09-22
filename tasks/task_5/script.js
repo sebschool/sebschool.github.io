@@ -27,7 +27,7 @@ function createTable() {
 
     // For loop setup variables
     let currentNum = 0;
-    let tableStr = "<table border=1>";
+    let tableStr = `Oi, the multiples of ${multiple} from 0 to ${upperLimit} are: \n<table border=1>`;
 
     // Instead of using javascript to create the table through functions, we create the table as a string and document.write() it to the body
     // While true loop for writing to document
