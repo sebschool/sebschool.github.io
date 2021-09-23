@@ -44,8 +44,8 @@ function numberTools(type) {
             alert(`The square root of ${userNum} is: ${Math.sqrt(userNum)}`);
             break;
         case "round":
-            // Alerting the user's number rounded using the built in js funciton (there is no builtin way to round a number to the nth digit)
-            alert(`${userNum} rounded to the nearest 10th is: ${Math.round(userNum)}`);
+            // Alerting the user's number rounded to the nearest tenth
+            alert(`${userNum} rounded to the nearest 10th is: ${Math.round(userNum * 10) / 10}`);
             break;
         case "random":
             // Generating a random number between 0 and 100 and alerting the number to the user
